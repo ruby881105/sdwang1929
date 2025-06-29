@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>紀念人物：王蘇緞 女士</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            margin: 20px;
+        }
+        .timeline {
+            list-style-type: none;
+            padding: 0;
+        }
+        .timeline li {
+            background-color: #fff;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>紀念人物：王蘇緞 女士</h1>
+    </header>
+
+    <section>
+        <h2>簡介</h2>
+        <p>這裡是紀念人物的簡短介紹：</p>
+    </section>
+
+    <section>
+        <h2>生平事件</h2>
+        <ul class="timeline">
+            <li>
+                <strong>出生：</strong> 1929年3月6日 - 出生於原高雄縣路竹鄉大社村
+            </li>
+            <li>
+                <strong>重要事件：</strong> 為緬懷王蘇緞女士的付出，其子女謹特此設立「王蘇緞女士紀念獎學金。
+委由學校評審，期能協助高雄市路竹區大社國小、高雄市路竹區一甲國小、高雄市路竹高中國中部、臺南一中之清寒優秀學生及品學兼優學生努力向學。
+            </li>
+            <li>
+                <strong>去世：</strong> 2014年5月28日 - 逝世於台灣台北，享壽86歲。
+            </li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 紀念人物網站</p>
+    </footer>
+
+</body>
+</html>
