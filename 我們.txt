@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>慈善機構網站</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 頭部區域 -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="慈善機構 Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">首頁</a></li>
+                <li><a href="#">關於我們</a></li>
+                <li><a href="#">服務項目</a></li>
+                <li><a href="#">聯繫我們</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 主內容區域 -->
+    <main>
+        <section class="about-us">
+            <h1>關於我們</h1>
+            <p>我們致力於改善弱勢群體的生活。</p>
+            <!-- 更多內容 -->
+        </section>
+    </main>
+
+    <!-- 頁腳區域 -->
+    <footer>
+        <p>&copy; 2025 慈善機構 | 版權所有</p>
+    </footer>
+</body>
+</html>
+/* 基本設置 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #004d99; /* 藍色背景 */
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    width: 100px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+main {
+    padding: 40px;
+}
+
+.about-us {
+    background-color: #f4f4f4;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+/* 內容淡入動畫 */
+.about-us {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #ffcc00; /* 黃色 */
+}
+
+button:hover {
+    background-color: #ffcc00;
+    color: white;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+<button onclick="changeContent()">切換內容</button>
+
+<div id="content">
+    <p>這是原來的內容。</p>
+</div>
+
+<script>
+    function changeContent() {
+        document.getElementById("content").innerHTML = "<p>這是新的內容。</p>";
+    }
+</script>
+window.addEventListener('scroll', function() {
+    let aboutSection = document.querySelector('.about-us');
+    let scrollPosition = window.scrollY + window.innerHeight;
+
+    if (scrollPosition > aboutSection.offsetTop) {
+        aboutSection.classList.add('visible');
+    }
+});
+.about-us.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.5s ease;
+}
